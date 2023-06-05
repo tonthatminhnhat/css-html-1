@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+
+</head>
+<style>
+    header{
+        top:2px;
+        position: relative;
+    }
+a:hover{  text-decoration: none;
+            color: orangered;}
+body{font-family: Arial, Helvetica, sans-serif;}
+ a{ display: inline-block;
+     text-decoration: none;
+    font-size:medium;
+     color: black;
+    padding: 0;}
+img{ width:50px;
+     height: 35PX;
+    margin-left: 160px;  
+    position: relative;
+    top: 8px
+    }
+h2{ display:inline;
+   color:orangered;
+   font-size:x-large;
+   position: relative;
+   top: 15px;
+} 
+#search1{    
+      background-color: orange;
+      margin-left: 290px;
+      position: absolute;
+      width: 300px;
+      height: 39.5px;    
+}
+form{  top: 6px;
+       display: flex;
+       background: red;
+       width: 250px;
+       margin-left: 300px;
+       padding: 2px;
+       border-radius: 99rem;
+       position:absolute;
+}
+#search-btn{   height: 36px;
+             position: relative;
+               width: 36px;
+               background: #F5F5F5;
+               border: 0;
+               margin-left: 1px;
+               border-radius: 20px 0px 0 20px;
+            }     
+#search-text{  width: 220px;
+                 border-radius: 0 20px 20px 0  ; 
+                border: 0; background:#F5F5F5;
+                padding: 0;
+                height: 36px;
+                width: 258px;
+                outline: none;
+               }
+.odangnhap{ background: white;
+               margin-top: 5px;
+              height: 25px;
+              width: auto;
+             display: flex;
+            left: 69%;
+            border-radius: 99rem;
+            padding: 0;
+            top: 6px;
+            position:absolute;
+             }
+.odangnhap li{ margin-right: 10px;}
+.VND{   display: flex;
+        list-style: none;
+       }
+
+.VND a{   background: white;
+           margin-right: 10px;
+        padding: 5px;
+         border-radius: 99rem;
+        right: 10px;}
+.VND select{  background: #ffffff;
+                   padding: 4px;
+                border-radius: 99rem;
+            }
+.VND li :hover {  background-color: #DEDEDE;  
+             display: block;}       
+.VND li select {  top: 2px; position: relative;
+     background-color: white;} 
+.VND li select:hover ::after{  background-color:#DEDEDE;}
+.VND a{margin:auto }
+.VND h2{ color: black;
+          font-size:small;
+           margin-top: 100px;}
+.menu {display: flex;
+       list-style: none;
+       margin-left:  240px; 
+       margin-top: 0;
+       }
+.menu li{ padding: 6px 8px ;
+        z-index: 1;}
+.menu li:hover{ background-color: #f5f5f5; 
+               border-radius: 20px}
+.menu2{ position: relative; margin-right: 10px;}
+.menu12{ 
+    /* list-style: none; */
+    background-size: cover;
+         background-color:white;
+        padding: 0;
+        display: none;
+        border-radius: 20px;
+        position:absolute;
+        flex-wrap: wrap;
+        overflow:auto;
+        height: 600%;
+        width: 525px;
+        left: 0;}
+.menu12 li { background-color: white;
+               margin-top: 6px;
+               margin-right: 6px;
+               margin-left: 6px;
+               width: 115px;
+               height: 70px;
+               padding: 0;
+               border-radius: 10px;
+               display: flex;
+                position:relative;
+                 /* justify-content: space-around;  */
+               margin-left: 5px;     
+               text-align: center;        
+              }
+.menu2:hover .menu12 { display: flex;} 
+.menu22 { padding: 0;
+          list-style: none;
+          position:absolute;
+          display: none;
+          left: 0;
+          top: 100%;
+          margin-right: -150px;
+        background-color: white;
+        border-radius: 20px;}
+.menu22 li:hover{  background-color: white;    }
+.menu2:hover .menu22{ display: block;}
+.menu22 li a:hover{    color: orange;
+                     background-color: white;}
+.menu22 li :hover {color:orangered;
+                    
+                 background-color: white;}
+.menu12 img{    border-radius: 10px;
+                margin: 0;
+                height: 100%;         
+                width:100%;
+                top: 0;
+                position:absolute;
+                padding: 2px;
+                background: orange;
+                }
+.menu12 h5{   position: absolute;
+    color: white;
+    z-index: 1;
+    margin: 0;
+    top: 70%;
+    left: 10%;
+    font-size: small;
+    font-weight: 700;                           
+}
+.Dong1 h2{ color: orange; font-family:sans-serif; font-weight: 500;font-size: 26px;}
+header{position: fixed; height: 110px; width: 100%; z-index: 5; background-color: white; top: 0;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.19);}
+</style>
+<body>
+    <header>   
+    <div class="Dong1">
+      <div  style="left: 30px; position: relative;">
+        <a href="#" >
+<img src="/GUI/logo.png" />
+<h2> Nlook</h2>
+</a>
+    <form id="search1">
+    <button id="search-btn"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+     <input type="text" id="search-text" placeholder="Tìm theo điểm đến, hoạt động" >
+    </form>
+  </div>
+    <div class="odangnhap">
+     <div class="VND">
+        <li>
+               <select >
+                <optgroup label="Đơn vị tiền tệ"></optgroup>
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>      
+              </select>
+        </li>
+        <li><a href="#">Trợ giúp </a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li> <a href="#">Đăng nhập</a></li>
+    </div >
+    </div>
+
+</div>
+<hr width="100%" size="1px" align="center" color="#DEDEDE" />
+
+<ul class="menu">
+
+<li class="menu2">
+    <a href="#"> <b>Nơi bạn muốn đến</b></a>
+    <ul class="menu12">
+        <li>  <a href="#">       
+            <h5 class="text">Huế</h5>
+            <img src="https://huedailytour.net/wp-content/uploads/2018/03/Hoang-thanh-hu.jpg">
+              </a>      
+        </li>
+        <li> <a href="#">       
+            <h5 class="text">Đà Lạt</h5>
+            <img src="data:image/jpeg;base64,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">
+               </a></li>
+        <li> <a href="#">       
+            <h5 class="text">Sa Pa</h5>
+            <img src="http://bizweb.dktcdn.net/100/349/716/files/dieu-gi-lam-nen-sapa-tuyet-voi-den-vay-1.jpg?v=1595918271625">
+              </a></li>
+        <li> <a href="#">       
+            <h5 class="text">China</h5>
+            <img src="https://cdn.britannica.com/89/179589-138-3EE27C94/Overview-Great-Wall-of-China.jpg?w=800&h=450&c=crop">
+        </a></li>
+        <li> <a href="#">       
+            <h5 class="text">Nhật Bản</h5>
+            <img src="https://danviet.mediacdn.vn/296231569849192448/2022/3/13/4-1647171417067-1647171417187102804877.png">
+             </a></li>
+        <li> <a href="#">Điểm tham quan </a></li>
+        <li> <a href="#">Điểm tham quan </a></li>
+        <li> <a href="#">Điểm tham quan </a></li>
+        <li> <a href="#">Điểm tham quan </a></li>
+    </ul>
+</li>
+
+    <li class="menu2">
+    <a href="#">  <b> Vui chơi & Giải trí</b></a>
+    <ul class="menu22">
+        <li> <a href="#">Điểm tham quan </a></li>
+        <li> <a href="#">Tour</a></li>
+        <li> <a href="#">Thẻ tham quan</a></li>
+        <li> <a href="#">Phiêu lưu & Khám phá thiên nhiên</a></li>
+        <li> <a href="#"> Massage & Suối nước nóng</a></li> 
+    </ul> </li> 
+
+    <li class="menu2">
+        <a href="#"> <b> Lưu trú</b></a> 
+      <ul class="menu22">
+     <li> <a href="#">Khách sạn</a></li>
+     <li> <a href="#">Nghĩ dưỡng</a></li>
+ </ul> </li> 
+    <li class="menu2">
+       <a href="#"> <b> Di chuyển</b></a> 
+     <ul class="menu22">
+    <li> <a href="#">Vé sân bay </a></li>
+    <li> <a href="#">Tàu hỏa</a></li>
+    <li> <a href="#">Xe Buýt</a></li>
+    <li> <a href="#">Kết hợp</a></li>
+</ul> </li> 
+<li class="menu2">
+    <a href="#"> <b> Thuê xe</b></a> 
+  <ul class="menu22">
+ <li> <a href="#">Thuê xe  </a></li>
+ <li> <a href="#">Xe máy & xe đạp</a></li>
+ <li> <a href="#">Thuê xe có tài xế riêng</a></li>
+</ul> </li> 
+<li><a href="#"> <b> Ẩm thực</b></a> </li>
+<li> <a href="#"> <b> Thêm nhiều khám phá</b></a> </li>
+</ul>
+    </header>
+<style>
+.carousel-inner{
+    height: 500px;
+    width: 100% 
+    position: relative; 
+    background: white; }
+.carousel-item{
+height: 100%;
+width: 100%;
+background-position: center;
+background: no-repeat;
+background-size: 100% 515px;}
+.action{   background: white;
+      position: relative;
+     height: 50px;
+     width: 680px;
+     border: 2px solid white;
+      margin: 0;   
+      top:0px; 
+      border-radius: 10px 10px;}
+#search2{    padding: 0px;
+height: 100%;
+width: 52px;
+border: 0;
+position: relative;
+border-radius: 15px 0 0 15px;
+background:  white;}
+#search3{     top: 2px;
+    font-size: 30px;
+    position: relative;}
+#search-text2{
+    background-color: white;
+    padding: 0;
+    border: 0;
+    width: 496px;
+    font-size:larger;
+    position: relative;
+    outline: none;
+}
+#search-text2 a li{
+list-style: none;
+ 
+}
+.nuttimkiem{          background: orangered;
+top: 1px;
+position: absolute;
+right: 2px;
+border-radius: 10px 10px;
+width: 120px;
+height: 45px;
+color: white;
+text-align: center;
+          }
+.nuttimkiem h2{ color: white;
+        font-size: medium;
+        top: 12px;
+        position: relative;
+        }
+
+.nuttimkiem a{ width: 100%;
+         height: 100%;}
+.action:hover { border-style: solid;
+        border-color: orange;;
+        }
+.container1{       top: 200px;
+width: 1000px;
+position: absolute;
+z-index: 1;
+color: white;
+left: 300px;}
+</style>
+<div style="height: 110px;"></div>
+<div id="carousel-example-1z" class="carousel slide carousel-fade" 
+data-ride="carousel" data-interval="7000">
+
+<div class="carousel-inner" role="listbox">
+<!--First slide-->
+<div class="container1">
+<h1><b> THẾ GIỚI TRỌN NIỀM VUI</b></h1>
+ <p> <b>Từ chuyến phượt "ngẫu hứng" đến những cuộc phiêu lưu, khám phá công thức niềm vui của riêng bạn</b></p>
+ <form class="action"> 
+  <button id="search2"><i class="fa-solid fa-magnifying-glass" id="search3" style="color: #000000;"></i></button>
+  <input type="text" id="search-text2" placeholder="Tìm theo điểm đến, hoạt động" >
+  <div  class="nuttimkiem" >
+  <a href="#"> <h2>Tìm kiếm</h2></a></div>
+ </form>
+</div>
+<div class="carousel-item active" 
+style="background-image:url(https://media.audleytravel.com/-/media/images/home/southeast-asia/vietnam/activities/ss_1104563759_bikes_in_hoi_an_3000x1000.webp?q=79&w=1920&h=640);"        >
+
+ </div>
+<!--Second slide-->
+<div class="carousel-item" 
+style="background-image: url(https://media2.gody.vn/public/mytravelmap/images/2022/6/21/oez1bwkbgzbyqb9odynqshoyofe3/94be454044b857d51775847b2dc504d9cd508d3c.jpg);">
+</div>
+<!--Third slide-->
+<div class="carousel-item"
+style="background-image: url(https://media.audleytravel.com/-/media/images/home/southeast-asia/vietnam/itineraries/hd-hero-images/istock-1150868344-ngoc-son-temple-hanoi-3000x1000.webp?q=79&w=1920&h=640);">
+</div>
+<!--/Third slide-->
+</div>
+<!--Controls-->
+<a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+<!--/.Controls-->
+</div>
+
+<!-- phanuudai -->
+
+<style>
+    .tieude{ color: black;
+             margin: 200px;
+            top:30px;
+        position:relative;}
+</style>
+<h2 class="tieude"><b>Ưu đãi hấp dẫn</b></h2>
+
+<style>
+.carousel-example-2z{ top: 200px;position: relative;}
+.carousel-inner-1{          
+        display: block ;
+        height: 190px;
+        position: relative;
+        top:30px;
+       } 
+.uudai-item{
+       top:10px;
+         left: 160px;
+        display: flex;
+       justify-content: space-between;
+  width: 1200px;
+ height: 170px;
+ position: relative;}
+.uudai-item  img{   width: 380px;
+               height: 170px;
+               border-radius: 10px;
+               position: relative;
+               margin: 0;
+               }
+             .uudai-item img:hover{
+  transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,5);
+}
+.ka{ background-color: gray;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 20px;
+                        top:80px;
+                        left: 120px;
+                       }
+                      .ka1{
+             background-color: gray;
+             border: 10px;
+             height: 20px;
+             width: 20px;
+
+}
+.kb{ background-color: gray;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 20px;
+                        top:80px;
+                        right: 120px;
+                       }
+          .kb1{
+             background-color: gray;
+             border: 10px;
+             height: 20px;
+             width: 20px;
+
+}
+
+</style>
+
+<div id="carousel-example-2z" class="carousel slide" data-ride="carousel" data-interval="4000">
+  <div class="carousel-inner-1" >
+  <div class="carousel-item active z" id="ok">
+    <div class="uudai-item ">
+         <a href="#"> <img src="https://i.gyazo.com/407e25bfd594f8098ebab858da1352dc.jpg" ></a>
+         <a href="#"> <img src="https://i.gyazo.com/9e4fdd89cb4e5e7600b0560db7e2d295.jpg" ></a>
+         <a href="#"> <img src="https://i.gyazo.com/407e25bfd594f8098ebab858da1352dc.jpg" ></a>
+    </div>
+  </div>
+  <div class="carousel-item z" id="ok">
+    <div class="uudai-item">
+      <a href="#"> <img src="https://i.gyazo.com/9e4fdd89cb4e5e7600b0560db7e2d295.jpg" ></a>
+      <a href="#"> <img src="https://i.gyazo.com/407e25bfd594f8098ebab858da1352dc.jpg" ></a>
+      <a href="#"> <img src="https://i.gyazo.com/9e4fdd89cb4e5e7600b0560db7e2d295.jpg" ></a>
+    </div>
+  </div>
+  <a class="carousel-control-prev ka" href="#carousel-example-2z" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon ka1" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next kb" href="#carousel-example-2z" role="button" data-slide="next">
+    <span class="carousel-control-next-icon kb1" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+
+<!-- visaonenchonnnlook -->
+<style>
+.so2{  top: 65px;
+          position: relative;
+        }
+    .visaochonNlook{   
+                         width: 1200px;
+                         height: 170px;
+                         top: 80px;
+                         left: 160px;position: relative;
+                         padding: 0; 
+                         display: flex;
+                         justify-content: space-between;
+
+           }
+.nguyennhan p{  padding: 0;margin: 0; }
+.nguyennhan{ height: 170px; width: 267px; }
+.visaochonNlook img{height: 57px; width: 57px; padding: 0; margin: 0; margin-bottom: 15px;            
+}
+</style>
+<h2 class="tieude so2"><b>Vì sao bạn nên chọn Nlook</b></h2>
+<div class="visaochonNlook">
+      <div class="nguyennhan"> 
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_112,h_112/v1663655841/ued/platform/Discover_the_possibilities.webp" >
+        <h5><b>Nhiều lựa chọn</b></h5>
+        <p>Tìm kiếm niềm vui của bạn với gần nửa triệu điểm tham quan, khách sạn và hơn thế nữa.</p>
+     </div>
+     <div class="nguyennhan"> 
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_112,h_112/v1663655837/ued/platform/Enjoy_deals_delights.webp" >
+        <h5><b>Ưu đãi giá tốt</b></h5>
+        <p>Dịch vụ hàng đầu. Giá tốt. Và nhận Klook credit để được giảm giá cho đơn hàng tiếp theo.</p>
+     </div>
+     <div class="nguyennhan"> 
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_112,h_112/v1663655837/ued/platform/Exploring_made_easy.webp" >
+        <h5><b>Dễ dàng khám phá</b></h5>
+        <p>Đặt hàng phút chót, bỏ qua hàng chờ và được miễn phí hủy để tận hưởng trọn vẹn.</p>
+     </div>
+     <div class="nguyennhan"> 
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_112,h_112/v1663655837/ued/platform/Travel_you_can_trust.webp" >
+        <h5><b>Đáng tin cậy</b></h5>
+        <p>Đọc đánh giá chân thực và được hỗ trợ tận tình. Chúng tôi sẽ phục vụ bạn từng bước.</p>
+     </div>
+</div>
+<!-- 
+cácdịchvụnổibật -->
+<style>  .so3{ top: 115px;  }
+    body{  height:500dvh;
+            width: 100%; }
+   #carousel-example-3z{top: 150px; }
+    .zzz{ 
+      top: 0px; 
+        /* display: block ; */
+        height: 400px;} 
+    .zz{height: 390px;width: 100%; left:160px ; 
+    margin: 0;  padding: 0;       
+    }
+    .cacdichvinoibat-item{  border-radius: 20px ; 
+                      height:390px;width: 1200px;
+                 display: flex; justify-content: space-between;}
+
+    .dichvu{  border: 1px solid gray;
+      height:390px;width: 275px; border-radius: 20px ;}
+    .dichvu:hover{transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,5);  
+      border:none}
+    .dichvu img{  height: 185px; width: 100%;position: relative;top: 0;
+                     left: 0; margin: 0; padding: 0; border-radius: 20px 20px 0 0 ;}
+    .tendichvu{ height: 204px; width: 100%;position: relative; background-color: white; 
+        padding: 12px 16px; border-radius: 0 0 20px 20px;
+    }
+    .kaz{background-color:  gray;height: 30px;width: 30px;
+        border-radius: 20px;top:185px;left: 120px;}
+    .kbz{background-color:  gray;height: 30px;width: 30px;
+        border-radius: 20px;top:185px;right: 120px;}
+</style>
+<h2 class="tieude so3"><b>Các dịch vụ nổi bật</b></h2>
+<div id="carousel-example-3z" class="carousel slide" data-ride="carousel" data-interval="16000">
+    <div class="carousel-inner-1 zzz" >
+    <div class="carousel-item active zz" id="ok">
+      <div class="cacdichvinoibat-item ">
+            <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+                 <div class="tendichvu">
+                   <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+                   <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+                    <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+                   <h6 style="background: #f5f5f5; border-radius:5px;
+                   color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+                  <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+                    <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+                  <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+                  <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+                   color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+              </div>
+            </div>
+            <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+              <div class="tendichvu">
+                <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+                <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+                 <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+                <h6 style="background: #f5f5f5; border-radius:5px;
+                color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+               <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+                 <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+               <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+               <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+                color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+           </div>
+         </div>
+         <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+          <div class="tendichvu">
+            <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+            <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+             <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+            <h6 style="background: #f5f5f5; border-radius:5px;
+            color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+           <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+             <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+           <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+           <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+            color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+       </div>
+     </div>
+     <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+      <div class="tendichvu">
+        <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+        <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+         <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+        <h6 style="background: #f5f5f5; border-radius:5px;
+        color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+       <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+         <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+       <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+       <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+        color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+   </div>
+     </div>
+      </div>
+    </div>
+    <div class="carousel-item  zz" id="ok">
+      <div class="cacdichvinoibat-item ">
+            <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+                 <div class="tendichvu">
+                   <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+                   <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+                    <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+                   <h6 style="background: #f5f5f5; border-radius:5px;
+                   color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+                  <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+                    <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+                  <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+                  <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+                   color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+              </div>
+            </div>
+            <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+              <div class="tendichvu">
+                <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+                <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+                 <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+                <h6 style="background: #f5f5f5; border-radius:5px;
+                color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+               <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+                 <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+               <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+               <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+                color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+           </div>
+         </div>
+         <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+          <div class="tendichvu">
+            <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+            <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+             <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+            <h6 style="background: #f5f5f5; border-radius:5px;
+            color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+           <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+             <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+           <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+           <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+            color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+       </div>
+     </div>
+     <div class="dichvu"> <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/iddtkovsys2vlq9ucw2c.webp" >
+      <div class="tendichvu">
+        <h6><b>Tour Ngày Trekking Vườn Quốc Gia Bạch Mã</b></h6>
+        <h6 style="color:#f09b0a; font-size: medium;"><b> ★ 4.8</b>
+         <span style="color:gray; font-size:medium;"> (47)  • 500+  Đã được đặt</span> </span></6>
+        <h6 style="background: #f5f5f5; border-radius:5px;
+        color: gray; padding: 3px;display: inline-block; ">Hướng dẫn tiếng việt</h6>
+       <h6 style="top: 20px; position: relative; font-size: medium; "><b>đ</b>
+         <span style="color:black; font-size:medium; text-decoration:underline;"> <b>999,000</b></span> 
+       <span style=" text-decoration:line-through;"> đ 2,000,000</span></6>
+       <h6 style="background: #FFF0E5; border-radius:5px; top:  20px; position: relative;
+        color: #FF5B00; padding: 3px;display: inline-block; ">Chính sách đảm bảo về giá</h6>                                 
+   </div>
+     </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev kaz" href="#carousel-example-3z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon ka1" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next kbz" href="#carousel-example-3z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon kb1" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+  </div>
+  </div>
+ <style>   
+ .button1{  position: relative; height: 38px; text-align: center;
+          left :40%; width: 300px;top: 170px; vertical-align: middle; border: 1px solid black;
+         padding-top: 7px; border-radius: 10px;
+}
+ </style>
+<a href="#" class="button1">Xem thêm</a>
+<!-- 
+hotnhattainlook -->
+<style> .so4 b{ top:230px;left: -105px; margin: 0; position: relative; color: black;}
+.hoatdong{ width: 375px;height: 100%;  position: relative; 
+  background-image: linear-gradient( to top  , #FFFAFA 90% ,#FAEBD7);
+  padding: 15px; border-radius: 15px;
+ position: relative;}
+</style>
+<h2 class="so4"><b>Hot nhất tại Nlook </b></h2>
+<style>
+  .z444{  top: 0px; height: 430px;}
+  .cachoatdong{ height: 100%; width: 100%; }
+  .cachoatdong1{   height: 100%; left: 160px; position: relative; display: flex; 
+  width: 1200px; text-align: center; justify-content: space-between; }
+  .hoatdong{  border: 1px solid #C1CDC1;}
+  .hoatdong:hover{transform: translateY(-6px); box-shadow: 0 8px 15px rgba(0,0,0,6);  
+      border:none}
+  .danhmuchoatdong{ position: relative; height: 310px;
+   display: flex; justify-content: space-between;     flex-direction: column;}
+  .danhmuc{ width: 100%; height:90px;display: flex; }
+
+  .anhdanhmuc{ height: 90px; width: 90px; background-position: center; border: 1px solid #C1CDC1;
+  background-repeat: no-repeat; border-radius: 10px;position: relative;
+  background-size: cover;}
+  .thongtindanhmuc{  height: 100%; width: 260px; position: relative; 
+  text-align: left; padding-left: 10px; padding-top: 5px;}
+  .thongtinthem{ height: 20px; width: 250px; position: absolute;
+     bottom: 5px; text-align: left; display: flex;}
+  .thongtinthem img{   position: relative; height: 12px; width: 9px; margin: 0;top: 1px;}
+  .thongtinthem h6{   font-size: small;
+    position: absolute; color: orange;
+    width: 236px;
+    left: 10px;
+    height: 18px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    text-align: left;}
+    .slide4{ top:45%}
+    #carousel-example-4z{ top: 255px;}
+</style>
+<div id="carousel-example-4z" class="carousel slide" data-ride="carousel" data-interval="50000">
+  <div class="carousel-inner-1 z444" >
+
+  <div class="carousel-item active z44" >
+    <div class="cachoatdong ">
+      <div class="cachoatdong1">
+              <div class="hoatdong">
+               <div style="height: 60px;top: 10px; position: relative;">
+                <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+              </div>
+              <hr style="width: 100%; bottom: 0px;">
+                <div class="danhmuchoatdong">
+                     <div class="danhmuc">
+                          <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                           <div class="thongtindanhmuc">
+                             <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                             <div class="thongtinthem">
+                                 <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                                 <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="danhmuc">
+                      <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                       <div class="thongtindanhmuc">
+                         <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                         <div class="thongtinthem">
+                             <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                             <h6>Khám phá một trong những công viên giả</h6>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="danhmuc">
+                  <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+                   <div class="thongtindanhmuc">
+                     <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                     <div class="thongtinthem">
+                         <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                         <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                        </div>
+                    </div>
+             </div>
+
+               </div>
+              </div> 
+              <div class="hoatdong">
+                <div style="height: 60px;top: 10px; position: relative;">
+                 <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+               </div>
+               <hr style="width: 100%; bottom: 0px;">
+                 <div class="danhmuchoatdong">
+                      <div class="danhmuc">
+                           <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                            <div class="thongtindanhmuc">
+                              <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                              <div class="thongtinthem">
+                                  <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                                  <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                                 </div>
+                             </div>
+                      </div>
+                      <div class="danhmuc">
+                       <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                        <div class="thongtindanhmuc">
+                          <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                          <div class="thongtinthem">
+                              <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                              <h6>Khám phá một trong những công viên giả</h6>
+                             </div>
+                         </div>
+                  </div>
+                  <div class="danhmuc">
+                   <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+                    <div class="thongtindanhmuc">
+                      <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                      <div class="thongtinthem">
+                          <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                          <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                         </div>
+                     </div>
+              </div>
+ 
+                </div>
+               </div> 
+               <div class="hoatdong">
+                <div style="height: 60px;top: 10px; position: relative;">
+                 <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+               </div>
+               <hr style="width: 100%; bottom: 0px;">
+                 <div class="danhmuchoatdong">
+                      <div class="danhmuc">
+                           <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                            <div class="thongtindanhmuc">
+                              <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                              <div class="thongtinthem">
+                                  <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                                  <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                                 </div>
+                             </div>
+                      </div>
+                      <div class="danhmuc">
+                       <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                        <div class="thongtindanhmuc">
+                          <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                          <div class="thongtinthem">
+                              <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                              <h6>Khám phá một trong những công viên giả</h6>
+                             </div>
+                         </div>
+                  </div>
+                  <div class="danhmuc">
+                   <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+                    <div class="thongtindanhmuc">
+                      <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                      <div class="thongtinthem">
+                          <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                          <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                         </div>
+                     </div>
+              </div>
+ 
+                </div>
+               </div> 
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-item z44" >
+    <div class="cachoatdong ">
+      <div class="cachoatdong1">
+        <div class="hoatdong">
+          <div style="height: 60px;top: 10px; position: relative;">
+           <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+         </div>
+         <hr style="width: 100%; bottom: 0px;">
+           <div class="danhmuchoatdong">
+                <div class="danhmuc">
+                     <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                      <div class="thongtindanhmuc">
+                        <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                        <div class="thongtinthem">
+                            <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                            <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                           </div>
+                       </div>
+                </div>
+                <div class="danhmuc">
+                 <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                  <div class="thongtindanhmuc">
+                    <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                    <div class="thongtinthem">
+                        <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                        <h6>Khám phá một trong những công viên giả</h6>
+                       </div>
+                   </div>
+            </div>
+            <div class="danhmuc">
+             <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+              <div class="thongtindanhmuc">
+                <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                <div class="thongtinthem">
+                    <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                    <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                   </div>
+               </div>
+        </div>
+
+          </div>
+         </div> 
+         <div class="hoatdong">
+           <div style="height: 60px;top: 10px; position: relative;">
+            <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+          </div>
+          <hr style="width: 100%; bottom: 0px;">
+            <div class="danhmuchoatdong">
+                 <div class="danhmuc">
+                      <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                       <div class="thongtindanhmuc">
+                         <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                         <div class="thongtinthem">
+                             <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                             <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="danhmuc">
+                  <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                   <div class="thongtindanhmuc">
+                     <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                     <div class="thongtinthem">
+                         <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                         <h6>Khám phá một trong những công viên giả</h6>
+                        </div>
+                    </div>
+             </div>
+             <div class="danhmuc">
+              <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+               <div class="thongtindanhmuc">
+                 <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                 <div class="thongtinthem">
+                     <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                     <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                    </div>
+                </div>
+         </div>
+
+           </div>
+          </div> 
+          <div class="hoatdong">
+           <div style="height: 60px;top: 10px; position: relative;">
+            <h5 style="font-size: x-large; margin: 0; "><b>Hoạt Động Du Lịch Việt Nam Bán Chạy</b></h5> 
+          </div>
+          <hr style="width: 100%; bottom: 0px;">
+            <div class="danhmuchoatdong">
+                 <div class="danhmuc">
+                      <div class="anhdanhmuc" style="background-image:url(https://vi.seatrekvietnam.com/wp-content/uploads/2018/05/ba-na-hills-1.jpg);"></div>
+                       <div class="thongtindanhmuc">
+                         <h6 style="font-size: medium ;">Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h6>
+                         <div class="thongtinthem">
+                             <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                             <h6>Đây là quần thể du lịch nghĩ dưỡng kết hợp</h6>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="danhmuc">
+                  <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/c_fill,w_843,h_474/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oklw8nrqcrhpxz2bjbpv.webp);"></div>
+                   <div class="thongtindanhmuc">
+                     <h6 style="font-size: medium ;">Vé VinWonders Nha Trang</h6>
+                     <div class="thongtinthem">
+                         <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                         <h6>Khám phá một trong những công viên giả</h6>
+                        </div>
+                    </div>
+             </div>
+             <div class="danhmuc">
+              <div class="anhdanhmuc" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_65/w_800/activities/mzefblljuetiycoas1or.webp);"></div>
+               <div class="thongtindanhmuc">
+                 <h6 style="font-size: medium ;">Tour Ngày Khám Phá Đồng Bằng Sông Cửu Long, Khởi hành từ Tp. HCM</h6>
+                 <div class="thongtinthem">
+                     <img src="https://res.klook.com/image/upload/v1634796421/ued/ttd/activity%20icon/Icon_subtitle_2x.webp">
+                     <h6>Tận hưởng kỳ nghỉ như mơ với các hoạt động</h6>
+                    </div>
+                </div>
+         </div>
+
+           </div>
+          </div> 
+              
+      </div>
+
+    </div>
+  </div>
+  <a class="carousel-control-prev ka slide4 " href="#carousel-example-4z" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon ka1" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next kb slide4" href="#carousel-example-4z" role="button" data-slide="next">
+    <span class="carousel-control-next-icon kb1" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+<!-- Trải nghiệm hấp dẫn cho mọi người -->
+<h2 class="so5" style="position: relative; top: 300px; 
+            left:200px; color: black; ">
+  <b>Trải nghiệm hấp dẫn cho mọi người</b></h2>
+<style> #carousel-example-5z{ top:300px;}
+  .z555{   height: 320px;}
+  .khungtrainghiem{ height: 100%; width: 1200px;left: 160px;position: relative;
+  display: flex; justify-content: space-between;
+  }
+  .cactrainghiem{height: 100%; width:375px; border-radius: 10px;background-position: center;
+  background-repeat: no-repeat;background-size: cover;border: 0.1px solid #C1CDC1; padding: 24px; 
+  padding-top: 30px; }
+  .cactrainghiem:hover{transform: translateY(-6px); box-shadow: 0 6px 12px rgba(0,0,0,6);border:none; }
+  .slide5{ top:140px}
+</style>
+  <div id="carousel-example-5z" class="carousel slide" data-ride="carousel" data-interval="1000000">
+    <div class="carousel-inner-1 z555" >  
+    <div class="carousel-item active z55" >
+         <div class="khungtrainghiem">
+           <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1676517972/e7rz1pdpa2cwzyujgkkr.webp);">
+            <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+             font-weight: 349;"><b>Cùng Đón Mùa Hoa Anh Đào</b></span></div>
+             <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+              <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+                Chuyến đi ngập tràn sắc hồng với các gợi ý du lịch ngắm hoa anh đào hấp dẫn</h6>
+            </div>
+            <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+            position: relative; top: 135px;border-radius: 5px;">     
+              <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+                 Khám phá thêm</h6>
+            </div>
+           </div>
+           <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1676519974/lrpgwr7lgzdbqd0fi6gj.webp);">
+            <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+             font-weight: 349;"><b>Chốt Gấp Kèo Sing - Thái</b></span></div>
+             <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+              <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+                Deal du lịch HOT nhất Singapore & Thái Lan</h6>
+            </div>
+            <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+            position: relative; top: 135px;border-radius: 5px;">     
+              <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+                 Khám phá thêm</h6>
+            </div>
+           </div>
+           <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1667463123/ynzixodlfqheqraktwvr.webp);">
+            <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+             font-weight: 349;"><b>Càng Mua Càng Hời</b></span></div>
+             <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+              <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+                Ưu đãi hấp dẫn. Càng mua nhiều - càng thêm lợi.</h6>
+            </div>
+            <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+            position: relative; top: 135px;border-radius: 5px;">     
+              <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+                 Khám phá thêm</h6>
+            </div>
+           </div>
+         </div>
+    </div>
+    <div class="carousel-item z55" >
+      <div class="khungtrainghiem">
+        <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1676517972/e7rz1pdpa2cwzyujgkkr.webp);">
+         <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+          font-weight: 349;"><b>Cùng Đón Mùa Hoa Anh Đào</b></span></div>
+          <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+           <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+             Chuyến đi ngập tràn sắc hồng với các gợi ý du lịch ngắm hoa anh đào hấp dẫn</h6>
+         </div>
+         <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+         position: relative; top: 135px;border-radius: 5px;">     
+           <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+              Khám phá thêm</h6>
+         </div>
+        </div>
+        <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1676519974/lrpgwr7lgzdbqd0fi6gj.webp);">
+         <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+          font-weight: 349;"><b>Chốt Gấp Kèo Sing - Thái</b></span></div>
+          <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+           <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+             Deal du lịch HOT nhất Singapore & Thái Lan</h6>
+         </div>
+         <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+         position: relative; top: 135px;border-radius: 5px;">     
+           <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+              Khám phá thêm</h6>
+         </div>
+        </div>
+        <div class="cactrainghiem" style="background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_746,h_600,c_fill/v1667463123/ynzixodlfqheqraktwvr.webp);">
+         <div style="font-size: 24px;line-height: 32px;color: rgb(255, 255, 255);
+          font-weight: 349;"><b>Càng Mua Càng Hời</b></span></div>
+          <div style="height: 60px;width: 195px;top: 10px;position: relative;">
+           <h6 style="color:white; font-size:14px;line-height: 18px;font-weight:0;">
+             Ưu đãi hấp dẫn. Càng mua nhiều - càng thêm lợi.</h6>
+         </div>
+         <div style="height: 36px; width: 126px; background-color:white;padding:9px 16px;    
+         position: relative; top: 135px;border-radius: 5px;">     
+           <h6 style="color:black ; font-size:13px;line-height: 18px;font-weight:0">
+              Khám phá thêm</h6>
+         </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev ka slide5 " href="#carousel-example-5z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon ka1" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next kb slide5" href="#carousel-example-5z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon kb1" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+  </div>
+  </div>
+ <!-- timkiemniemvuicuaban -->
+ <h2 class="so6" style="position: relative; top: 370px; 
+            left:200px; color: black; ">
+  <b>Tìm kiếm niềm vui của bạn</b></h2>
+<style>
+  #carousel-example-6z{ top: 370px;}
+  .khungniemvui{ height: 240px;width: 1200px; left: 160px;
+    position: relative; display: flex;justify-content: space-between;}
+  .niemvui{height: 100%;width: 180px;background-size: cover;background-position: center;border-radius: 10px;
+    position: relative; background-repeat: no-repeat; padding:20px 20px 0 20px;border: 0.5px solid #C1CDC1;}
+  .niemvui:hover{transform: translateY(-6px); box-shadow: 0 8px 15px rgba(0,0,0,6);  border:none}
+    .tenniemvui{width:140px;bottom:5px;position: absolute; height: auto;}
+
+</style>
+  <div id="carousel-example-6z" class="carousel slide" data-ride="carousel" data-interval="1000000">
+    <div class="carousel-inner-1 z666" >  
+    <div class="carousel-item active z66" >
+       <div class="khungniemvui">
+        <a href="http://127.0.0.1:5500/JS/danang.html">
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/rxqumcihtzatvhcnbedi.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Đà Nẵng </b></h5></div> 
+            </div> </a>
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/gavvg3cqxgqveezzzez5.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Hội An </b></h5></div> 
+            </div>
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/ikx9n5zgtb7m8nhehxcx.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Singapore </b></h5></div> 
+            </div>
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/wlclkebz6h33akvlqumm.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Bali </b></h5></div> 
+            </div>
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/ra4im4tjhbyzebxee4xl.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Osaka </b></h5></div> 
+            </div>
+            <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/whbrpalg9f77bskz34ow.webp);">
+              <div class="tenniemvui"><h5 style="color: white;"><b>Bangkok </b></h5></div> 
+            </div>
+       </div>
+    </div>
+    <div class="carousel-item z66" >
+      <div class="khungniemvui">
+       
+
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/rxqumcihtzatvhcnbedi.webp);">
+          <div class="tenniemvui"><h5 style="color:white">
+            <b>Đà Nẵng</b>
+          </h5>
+          </div> 
+
+        </div>
+
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/gavvg3cqxgqveezzzez5.webp);">
+          <div class="tenniemvui"><h5 style="color: white;"><b>Hội An </b></h5></div> 
+        </div>
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/ikx9n5zgtb7m8nhehxcx.webp);">
+          <div class="tenniemvui"><h5 style="color: white;"><b>Singapore </b></h5></div> 
+        </div>
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/wlclkebz6h33akvlqumm.webp);">
+          <div class="tenniemvui"><h5 style="color: white;"><b>Bali </b></h5></div> 
+        </div>
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/ra4im4tjhbyzebxee4xl.webp);">
+          <div class="tenniemvui"><h5 style="color: white;"><b>Osaka </b></h5></div> 
+        </div>
+        <div class="niemvui" style="background-image:url(https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/w_400,h_533,c_fill/cities/whbrpalg9f77bskz34ow.webp);">
+          <div class="tenniemvui"><h5 style="color: white;"><b>Bangkok </b></h5></div> 
+        </div>
+   </div>
+    </div>
+    <a class="carousel-control-prev ka slide6 " href="#carousel-example-6z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon ka1" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next kb slide6" href="#carousel-example-6z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon kb1" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+  </div>
+  </div>
+  <style>   
+    .button12{  position: relative; height: 38px; text-align: center;
+             left :40%; width: 350px;top: 480px; vertical-align: middle; border: 1px solid black;
+            padding-top: 7px; border-radius: 10px;}
+    </style>
+   <a href="#" class="button12">Xem tất cả</a>
+   <!-- khamphanhieuhonnx -->
+   <h2 class="so6" style="position: relative; top: 540px; 
+   left:-155px; color: black; ">
+<b>Khám phá nhiều hơn nữa</b></h2>
+<style>
+  .khungkhampha{height:270px; width: 1100px; position: relative;
+  left: 210px; top: 560px; display: flex; justify-content: space-between;}
+  .cackhampha{height: 100%; width:360px;border: 1px solid #e6e6e6; padding: 20px;
+     padding-top: 5px; text-align: center;border-radius: 10px;}
+  .cackhampha:hover{transform: translateY(-6px); box-shadow: 0 6px 12px rgba(0,0,0,6);border:none; }
+  .cackhampha img{ width: 230px;height: 160px; position: relative;margin: 0;}
+</style>
+
+<div class="khungkhampha">
+    <a href="http://127.0.0.1:5500/JS/blog.html" class="cackhampha">
+      <img src="https://res.klook.com/image/upload/v1640179720/veeon5jzqyjccj5m3lkg.webp"> 
+      <div style="font-size: 22px;font-weight: 600;line-height: 1.32;text-align: center; 
+      top:10px;position: relative;"> 
+      Xem blog của Nlook </div> 
+      <div style="    color: #212121;font-size: 14px;font-weight: 400;line-height: 1.5;
+      margin-top: 15px; text-align: center;">
+      Theo dõi các ý tưởng của Klook về xu hướng du lịch, lịch trình và các mẹo đi du lịch </div>
+    </a>
+    <a class="cackhampha">
+      <img src="https://res.klook.com/image/upload/v1640179766/arto4pac628jzdsuu3df.webp"> 
+      <div style="font-size: 22px;font-weight: 600;line-height: 1.32;text-align: center; 
+      top:10px;position: relative;"> 
+      Nhận credits miễn phí </div> 
+      <div style="    color: #212121;font-size: 14px;font-weight: 400;line-height: 1.5;
+      margin-top: 15px; text-align: center;">
+      Tìm hiểu cách nhận giảm giá cho đơn hàng tiếp theo khi đặt hàng và để lại đánh giá </div>
+    </a>
+    <a class="cackhampha">
+      <img src="https://res.klook.com/image/upload/v1640179875/ggxmmubhiq9nxkbobcro.webp"> 
+      <div style="font-size: 22px;font-weight: 600;line-height: 1.32;text-align: center; 
+      top:10px;position: relative;"> 
+      Nhận ưu đãi khi mời bạn bè</div> 
+      <div style="    color: #212121;font-size: 14px;font-weight: 100;line-height: 1.5;
+      margin-top: 15px; text-align: center;">
+      Sau khi bạn của bạn đăng ký và hoàn thành đơn hàng đầu tiên, bạn sẽ nhận ₫100,000 điểm thưởng </div>
+    </a>
+    
+</div>
+</body>
+</html>

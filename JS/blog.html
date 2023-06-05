@@ -1,0 +1,645 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous"> -->
+
+</head>
+<body>
+<style> 
+
+  body{font-family: sans-serif;}
+ .thanhcuon{ height: 100%; width: 102%; position: relative;
+    overflow-y: scroll;}
+
+  .cacdiemden{ height: 400px;width: 450px; left: -100%; position: relative; border-radius: 20px;
+  top:-30px; padding: 20px; border:0.1px solid ghostwhite; background-color: #fff;}
+  .quocgia{ width: 440px;  position: relative; display: flex;margin-bottom: 5px;}
+  .tenquocgia{width: 150px; display: flex;
+  position: relative;}
+  .tenquocgia a{text-decoration: none;color: #757575;}
+  .tenquocgia a:hover{color: orange;}
+  .ten{  display: flex; position: relative; padding: 0;margin: 0;
+    margin-right: 10px;
+ height: auto; width: 290px; flex-wrap: wrap; justify-content: flex-start; justify-content: space-between;}
+ .ten a{ height: 20px; width: auto;display: flex;position: relative;
+         text-decoration: none; color: #fff;word-spacing: 1px; margin-right:10px; margin-bottom:4px;
+        font-size: small; color: #757575;}
+  .ten a:hover{ color: orange;}
+</style>
+<style> 
+body{text-decoration: none;}
+header{font-family: sans-serif; position: relative;}
+   header{ width: 100%;height:50px;display: flex; position: relative; 
+    margin:0; top: -8px; background-color: white; box-shadow: 0 4px 20px 0 rgba(0,0,0,.19);}
+    .Dong1{ width: 100%; height: 100%; position: absolute; display: flex; top:7px}
+   .Dong1 img{width:50px;height: 35PX;;  
+    position: relative;top: 8px; }
+  .phanlogo{display: flex; position: relative;left:190px;}
+  .phanlogo a{display: flex; position: relative;text-decoration:none;color: orange;}
+  .phanlogo h2{ top: -4px;position: relative; left: 2px;}
+  .blog{ width: 40px; height: 20px; background-color: white; position: relative;
+  left: 20px;text-align: center; border-radius: 5px; border: 1px solid black;
+ color: black;    padding-top: 5px;padding-bottom: 5px;top: 12px;}
+  .blog:hover{background-color: #e0e0e0;}
+  .search1{ left: -300px; position: relative; background-color: #f5f5f5; height: 20px;
+  width: 250px; padding-top: 7px;padding-bottom: 11px; padding-left: 10px; margin: auto;
+border-radius: 15px;border: 1px solid orange; }
+   .search1:hover{border: 3px solid orange;}
+  #search-text{width: 210px; height: 25px; border: none; background-color: #f5f5f5;
+    outline: none;caret-color: orange;}
+  #search-btn{ height: 25px;background-color: #f5f5f5; border: none;width: 26px;}
+  
+</style>
+<header>
+  <div class="Dong1">
+    <div class="phanlogo">
+    <a href="#" >
+    <img src="/GUI/logo.png" /></a> 
+    <h2> <a href="#" > Nlook</a></h2>
+    <h2 style="left:10px;top: 6px; position: relative;font-size: medium;">|</h2>
+    <a href="#" ><div class="blog">Blog</div></a> 
+    </div>
+
+  <div class="search1">
+  <button id="search-btn"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+   <input type="text" id="search-text" placeholder="Tìm theo điểm đến, hoạt động" >
+  </div>
+</div>
+<style>
+  .odangnhap{  display: flex; list-style: none; position: relative; top: 6px;
+  left: 58%;}
+  .odangnhap li{margin: auto;margin-left: 20px; border: 1px solid gainsboro; height: 10px;position: relative;
+    width: auto;padding: 10px; padding-top:7px; padding-bottom: 14px; border-radius: 20px;}
+  .odangnhap a{text-decoration: none; }
+  .xuathien1{background-color: red; top: 40px;position: relative;display: none; height: 200px; width: 200px;}
+  .dropdown1:hover .cacdiemden{display: flex;}
+  .cacdiemden{ height: 400px;width: 460px; left: -100%; position: absolute; border-radius: 20px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.08); display: none;
+  top:35px; padding: 20px; border:1px solid ghostwhite; background-color: #fff;}
+  .odangnhap .dangnhap{border: 1px solid orange;font-size: 15px;}
+  .dangnhap:hover{background-color: #FFE4C4;}
+  .dangky:hover{background-color: #FFE4C4;}
+  header{position: fixed;height: 60px; z-index: 5;}
+</style>
+  <div class="odangnhap">
+      <li class="dropdown1"><span style="font-size: 15px;">Chọn điểm đến</span>
+        <i class="fa-solid fa-caret-down" style="color: #000000;"></i>
+            <div class="cacdiemden ">
+            <div class="thanhcuon">
+                 <div class="quocgia">
+                   <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+                     <a href="#">VIỆT NAM</a></h6></div>
+                     <div class="ten">
+                     <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+                     <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+                     <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                     <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+                     <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+                     <a href="#">Đồng Hới - Quảng Bình</a>  
+                   </div>
+                 </div>
+                 <div class="quocgia">
+                   <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+                     <a href="#">NHẬT BẢN</a></h6></div>
+                     <div class="ten">
+                     <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+                     <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+                     <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                      
+                   </div>
+                 </div>
+
+                 <div class="quocgia">
+                   <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+                     <a href="#">THÁI LAN</a></h6></div>
+                     <div class="ten">
+                     <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+                     <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+                     <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                     <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+                     <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+                     <a href="#">Đồng Hới - Quảng Bình</a>  
+                   </div>
+                 </div>
+                 <div class="quocgia">
+                   <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+                     <a href="#">VIỆT NAM</a></h6></div>
+                     <div class="ten">
+                     <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+                     <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+                     <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                     <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+                     <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+                     <a href="#">Đồng Hới - Quảng Bình</a>  
+                   </div>
+                 </div>
+                 <div class="quocgia">
+                   <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+                     <a href="#">VIỆT NAM</a></h6></div>
+                     <div class="ten">
+                     <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+                     <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+                     <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                     <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+                     <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+                     <a href="#">Đồng Hới - Quảng Bình</a>  
+                   </div>
+                 </div>
+               </div></div>  
+                </li>
+      <li class="dangky"><a href="#"><span style="font-size: 15px;color: black;">Đăng ký</span></a></li>
+      <li class="dangnhap"> <a href="#" style="color: orange;">Đăng nhập</a></li>
+  </div >
+</header>
+<style>
+  body{margin: 0;}
+  .banner{height: 380px;width: 100%; background-image: url(https://res.klook.com/image/upload/v1594957886/newblog/invalid-name_2x-2ddc8f1772d182438e65b491b5b1b05d.jpg);
+     top: 55px;position: relative; background-size: cover;background-position: center;
+    background-repeat: no-repeat; text-align: center;}
+    .chondiemden{background-color: white; width: 150px;height: 20px; left: 44%;
+      position: relative; top: 35%; border-radius: 20px; display: flex;border: 1px solid gray  ; 
+      padding-top: 10px; padding:8px;padding-bottom: 10px;cursor:pointer;}
+    .chondiemden:hover .so2{display: flex;}
+    .tenchondienden{ height: 15px;width: 100%;display: flex;top: -2px;
+      justify-content: space-between; padding: 5px; position: relative;}
+    .chondiemden h4{ height: 25px;font-size: 17px;}
+    .chondiemden i{height: 25px;position: relative;top: 1px;}
+    .so2{display: none; top: 44px;left:-120%; position: absolute; z-index: 1;}
+    .before2{ width: 0;height: 0;position: absolute;border-left: 10px solid transparent;
+    border-right: 10px solid transparent;border-bottom: 10px solid white;z-index: 1;
+    left: 49%; top: -12px;}
+</style>
+<div class="banner">
+  <h1 style="font-size: 55px;color: white; margin: 0; top: 38%;position: relative;">
+    Bí kíp du lịch chinh phục thế giới</h1>
+  <h5 style="color: white;font-size:16px;font-weight: 200;position: relative; top:36%;">
+    Khám phá những câu chuyện, cảm hứng và ý tưởng du lịch độc đáo cho chuyến vi vu tiếp theo của bạn</h5>
+  
+    <div class="chondiemden">
+    <div class="tenchondienden">
+    <h4 style="margin: 0;">Chọn điểm đến</h4>
+    <i class="fa-solid fa-caret-down icon1"></i>
+     
+    <div class="cacdiemden so2 ">
+      <span class="before2"></span>
+      <div class="thanhcuon">
+           <div class="quocgia">
+             <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+               <a href="#">VIỆT NAM</a></h6></div>
+               <div class="ten">
+               <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+               <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+               <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+               <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+               <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+               <a href="#">Đồng Hới - Quảng Bình</a>  
+             </div>
+           </div>
+           <div class="quocgia">
+             <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+               <a href="#">NHẬT BẢN</a></h6></div>
+               <div class="ten">
+               <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+               <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+               <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+                
+             </div>
+           </div>
+
+           <div class="quocgia">
+             <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+               <a href="#">THÁI LAN</a></h6></div>
+               <div class="ten">
+               <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+               <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+               <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+               <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+               <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+               <a href="#">Đồng Hới - Quảng Bình</a>  
+             </div>
+           </div>
+           <div class="quocgia">
+             <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+               <a href="#">VIỆT NAM</a></h6></div>
+               <div class="ten">
+               <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+               <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+               <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+               <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+               <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+               <a href="#">Đồng Hới - Quảng Bình</a>  
+             </div>
+           </div>
+           <div class="quocgia">
+             <div class="tenquocgia"><h6 style="margin:0;font-size: medium; height: auto;">
+               <a href="#">VIỆT NAM</a></h6></div>
+               <div class="ten">
+               <a href="#">Phú Quốc</a> <a href="#">TP Hồ Chí Minh</a> <a href="#">Hà Nội</a> 
+               <a href="#">Nha Trang</a> <a href="#">Đà Nẵng</a> <a href="#">Sapa</a> 
+               <a href="#">Đà Lạt</a> <a href="#">Hội An</a> <a href="#">Vũng Tàu</a>
+               <a href="#">Huế</a> <a href="#">Quy Nhơn</a> <a href="#">Hạ Long</a>
+               <a href="#">Cần Thơ - DB Sông Cửu Long</a> <a href="#">Mũi Né - Phan Thiết</a>
+               <a href="#">Đồng Hới - Quảng Bình</a>  
+             </div>
+           </div>
+         </div></div>  
+  </div>   
+      </div>
+</div>
+
+<!-- phuhopvoiban -->
+<style>
+.khungphuhop{ width: 1000px;height: 900px;left: 17%; top: 130px;
+position: relative;}
+.tieude{font-size: 28px; font-weight: 600; margin-bottom: 10px;}
+.gachchan{height: 2.5px; background-color:  #1C1C1C;;width: 100%;margin-bottom: 30px;}
+.khungdanhmuc{height:780px; width: 100%; position: relative;
+display: flex; flex-wrap:wrap; justify-content: space-between;}
+.danhmuc{height: 350px; width: 320px;background-color: white  ;}
+.danhmuc img{ height: 178px; border-radius: 15px; margin-bottom: 12px;}
+.thongtin{height: 155px; display: flex;
+  flex-direction:column; justify-content: space-between;} 
+.thongtin-ten{height: 73px;}
+.thongtin-ten span{    color: #437dff;font-size: 12px;font-style: italic;
+    font-weight: 400;line-height: 1.5;margin-right: 6px;}
+.tendanhmuc{height: 48px; margin-top: 3px; font-weight: 600;
+  line-height: 1.5;font-size: 15px; margin-top: 10px; color: #1C1C1C;}
+.thongtin-chitiet{ display: -webkit-box;-webkit-line-clamp:2;line-height: 1.5;
+-webkit-box-orient: vertical; overflow: hidden;color: #757575;font-size: 14px;
+    font-weight: 400;}
+.ngay{color: #757575;font-size: 14px;
+    font-weight: 400;}
+  a{text-decoration: none;}
+</style>
+<div class="khungphuhop">
+ <div class="tieude">Phù hợp với bạn</div>
+ <div class="gachchan"></div>
+ <div class="khungdanhmuc">
+    <a href="#">
+     <div class="danhmuc">
+      <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+      <div class="thongtin">
+          <div class="thongtin-ten">
+            <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+            <div class="tendanhmuc">
+                  Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+            </div>
+          </div>
+          <div class="thongtin-chitiet">
+           Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+          Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+          </div>
+          <div class="ngay">6/3/2023</div>
+      </div>
+    </div></a>
+    <a href="#">
+      <div class="danhmuc">
+       <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+       <div class="thongtin">
+           <div class="thongtin-ten">
+             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+             <div class="tendanhmuc">
+                   Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+             </div>
+           </div>
+           <div class="thongtin-chitiet">
+            Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+           Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+           </div>
+           <div class="ngay">6/3/2023</div>
+       </div>
+     </div></a>
+     <a href="#">
+      <div class="danhmuc">
+       <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+       <div class="thongtin">
+           <div class="thongtin-ten">
+             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+             <div class="tendanhmuc">
+                   Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+             </div>
+           </div>
+           <div class="thongtin-chitiet">
+            Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+           Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+           </div>
+           <div class="ngay">6/3/2023</div>
+       </div>
+     </div></a>
+     <a href="#">
+      <div class="danhmuc">
+       <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+       <div class="thongtin">
+           <div class="thongtin-ten">
+             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+             <div class="tendanhmuc">
+                   Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+             </div>
+           </div>
+           <div class="thongtin-chitiet">
+            Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+           Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+           </div>
+           <div class="ngay">6/3/2023</div>
+       </div>
+     </div></a>
+     <a href="#">
+      <div class="danhmuc">
+       <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+       <div class="thongtin">
+           <div class="thongtin-ten">
+             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+             <div class="tendanhmuc">
+                   Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+             </div>
+           </div>
+           <div class="thongtin-chitiet">
+            Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+           Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+           </div>
+           <div class="ngay">6/3/2023</div>
+       </div>
+     </div></a>
+     <a href="#">
+      <div class="danhmuc">
+       <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_640,h_356/v1678088766/blog/jkfkyjxyoh4f5z0liluo.webp">
+       <div class="thongtin">
+           <div class="thongtin-ten">
+             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+             <div class="tendanhmuc">
+                   Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?
+             </div>
+           </div>
+           <div class="thongtin-chitiet">
+            Songkran 2023 đã chính thức trở lại với những hoạt động vui hết nấc. 
+           Bài viết này sẽ là kim chỉ nam giúp bạn có được trải nghiệm Songkran 2023 như ý.
+           </div>
+           <div class="ngay">6/3/2023</div>
+       </div>
+     </div></a>
+ </div>
+</div>
+<style>
+  .khungtongxuhuong{width: 1000px; height: auto;position: relative;
+  top: 100px;left: 17%; display: flex;margin-bottom: 100px;}
+  .khungxuhuong{width: 550px; height: 100%;background-color: white; margin-right: 40px;}
+  .xuhuong{width: 100%;height: auto; position: relative; 
+  display: flex; margin-bottom: 30px;border-bottom: 1px solid #eee}
+  .xuhuong img{ height:130px;width: 200px;margin-right:12px; border-radius: 10px;}
+  .thongtinxuhuong{ width: 100%; height: 155px;}
+  .khunglienquang{width: 410px;height: auto; position: relative;}
+  .lienquang{width: 100%; height: 90px;background-color: white; display: flex;margin-bottom: 15px;}
+  .lienquang img{height: 80px; width: 145px;position: relative;border-radius: 10px;
+    margin-right: 13px;}
+  .khungthongtinlienquang{ width: 100%; height: 100%; display: flex;flex-direction: column;
+  justify-content: space-between;}
+  .nho{margin-top: 0px;}
+  .nutxemthem{height: 44px;width: 200px;border:1px solid #4a4a4a;border-radius: 10px; 
+    margin-bottom: 100px;cursor: pointer;}
+  .nutxemthem:hover{background-color: rgba(0,0,0,.06);}
+</style>
+<div class="khungtongxuhuong">
+  <div class="khungxuhuong">
+    <div class="tieude">Xu hướng du lịch mới nhất</div>
+    <div class="gachchan"></div>
+    <a href="#">
+    <div class="xuhuong">
+      <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+      <div class="thongtinxuhuong">
+          <div class="thongtin">
+               <div class="thongtin-ten">
+                 <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                 <div class="tendanhmuc">
+                  Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                 </div>
+               </div>
+               <div class="thongtin-chitiet">
+                Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+               </div>
+               <div class="ngay">19/4/2023</div>
+           </div>
+        
+      </div>
+    </div></a>
+    <a href="#">
+      <div class="xuhuong">
+        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+        <div class="thongtinxuhuong">
+            <div class="thongtin">
+                 <div class="thongtin-ten">
+                   <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                   <div class="tendanhmuc">
+                    Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                   </div>
+                 </div>
+                 <div class="thongtin-chitiet">
+                  Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                 </div>
+                 <div class="ngay">19/4/2023</div>
+             </div>
+          
+        </div>
+      </div></a>
+      <a href="#">
+        <div class="xuhuong">
+          <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+          <div class="thongtinxuhuong">
+              <div class="thongtin">
+                   <div class="thongtin-ten">
+                     <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                     <div class="tendanhmuc">
+                      Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                     </div>
+                   </div>
+                   <div class="thongtin-chitiet">
+                    Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                   </div>
+                   <div class="ngay">19/4/2023</div>
+               </div>
+            
+          </div>
+        </div></a>
+        <a href="#">
+          <div class="xuhuong">
+            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+            <div class="thongtinxuhuong">
+                <div class="thongtin">
+                     <div class="thongtin-ten">
+                       <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                       <div class="tendanhmuc">
+                        Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                       </div>
+                     </div>
+                     <div class="thongtin-chitiet">
+                      Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                     </div>
+                     <div class="ngay">19/4/2023</div>
+                 </div>
+              
+            </div>
+          </div></a>
+          <a href="#">
+            <div class="xuhuong">
+              <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+              <div class="thongtinxuhuong">
+                  <div class="thongtin">
+                       <div class="thongtin-ten">
+                         <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                         <div class="tendanhmuc">
+                          Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                         </div>
+                       </div>
+                       <div class="thongtin-chitiet">
+                        Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                       </div>
+                       <div class="ngay">19/4/2023</div>
+                   </div>
+                
+              </div>
+            </div></a>
+            <a href="#">
+              <div class="xuhuong">
+                <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+                <div class="thongtinxuhuong">
+                    <div class="thongtin">
+                         <div class="thongtin-ten">
+                           <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                           <div class="tendanhmuc">
+                            Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                           </div>
+                         </div>
+                         <div class="thongtin-chitiet">
+                          Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                         </div>
+                         <div class="ngay">19/4/2023</div>
+                     </div>
+                  
+                </div>
+              </div></a>
+              <a href="#">
+                <div class="xuhuong">
+                  <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+                  <div class="thongtinxuhuong">
+                      <div class="thongtin">
+                           <div class="thongtin-ten">
+                             <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                             <div class="tendanhmuc">
+                              Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                             </div>
+                           </div>
+                           <div class="thongtin-chitiet">
+                            Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                           </div>
+                           <div class="ngay">19/4/2023</div>
+                       </div>
+                    
+                  </div>
+                </div></a>
+                <a href="#">
+                  <div class="xuhuong">
+                    <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1679994906/blog/osdd8xtefpafzcgvnlw1.webp">
+                    <div class="thongtinxuhuong">
+                        <div class="thongtin">
+                             <div class="thongtin-ten">
+                               <span> Hoạt động trải nghiệm</span><span> Ẩm thực</span>
+                               <div class="tendanhmuc">
+                                Tất Tần Tật Về Tour Harry Potter Studio Sắp Ra Mắt Ở Tokyo 
+                               </div>
+                             </div>
+                             <div class="thongtin-chitiet">
+                              Bạn đã sẵn sàng tham gia cuộc phiêu lưu thần bí cùng Tour Warner Bros. Studio Tokyo - The Making of Harry Potter hay chưa? Đặt lịch hẹn tại Tokyo nhé.
+                             </div>
+                             <div class="ngay">19/4/2023</div>
+                         </div>
+                      
+                    </div>
+                  </div></a>               
+     <button type="button" class="nutxemthem">
+             <span style="font-size: 18px; color: #212121;">Xem thêm</span>
+     </button>
+    </div> 
+  <div class="khunglienquang">
+    <div class="tieude">Nội dung liên quan</div>
+    <div class="gachchan"></div>
+    
+    <a href="#" class="lienquang">
+      <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+       <div class="khungthongtinlienquang">
+        <div class="tendanhmuc nho">
+          Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+      </div>
+    <div class="ngay">6/3/2023</div>
+       </div>
+      </a>
+      <a href="#" class="lienquang">
+        <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+         <div class="khungthongtinlienquang">
+          <div class="tendanhmuc nho">
+            Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+        </div>
+      <div class="ngay">6/3/2023</div>
+         </div>
+        </a>
+        <a href="#" class="lienquang">
+          <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+           <div class="khungthongtinlienquang">
+            <div class="tendanhmuc nho">
+              Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+          </div>
+        <div class="ngay">6/3/2023</div>
+           </div>
+          </a>
+          <a href="#" class="lienquang">
+            <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+             <div class="khungthongtinlienquang">
+              <div class="tendanhmuc nho">
+                Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+            </div>
+          <div class="ngay">6/3/2023</div>
+             </div>
+            </a>
+
+            <a href="#" class="lienquang">
+      <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+       <div class="khungthongtinlienquang">
+        <div class="tendanhmuc nho">
+          Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+      </div>
+    <div class="ngay">6/3/2023</div>
+       </div>
+      </a>
+      <a href="#" class="lienquang">
+        <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+         <div class="khungthongtinlienquang">
+          <div class="tendanhmuc nho">
+            Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+        </div>
+      <div class="ngay">6/3/2023</div>
+         </div>
+        </a>
+        <a href="#" class="lienquang">
+          <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+           <div class="khungthongtinlienquang">
+            <div class="tendanhmuc nho">
+              Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+          </div>
+        <div class="ngay">6/3/2023</div>
+           </div>
+          </a>
+          <a href="#" class="lienquang">
+            <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1652787040/blog/kgkzzcs6wce8bbsuawut.webp">
+             <div class="khungthongtinlienquang">
+              <div class="tendanhmuc nho">
+                Có Gì Ở Songkran 2023 - Lễ Hội Được Chờ Đón Nhất Thái Lan?Nhất Thái Lan?
+            </div>
+          <div class="ngay">6/3/2023</div>
+             </div>
+            </a>
+    </div>
+</div>
+</body>
+</html>
